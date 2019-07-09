@@ -1,42 +1,66 @@
 import 'package:flutter/material.dart';
 import 'TestCard.dart';
 
-// This Widget is used to route to the near vision diagnosis page
 class IntroCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      // Looks like a big button to support people with poor vision
-      child: Card(
-        child: SizedBox(
-          height: 500,
-          child: Center(
+      child: Stack(
+        alignment: Alignment.bottomCenter,
+        children: <Widget>[
+          // Image Background
+          Image.asset(
+            'assets/graphics/background.jpg',
+            fit: BoxFit.cover,
+            width: MediaQuery.of(context).size.width,
+            height: MediaQuery.of(context).size.height,
+          ),
+          // Blue Scrim for readability
+          Container(color: Colors.lightBlueAccent.withOpacity(0.6)),
+          // Text Container
+          Container(
+            margin: EdgeInsets.all(8.0),
             child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
-                Container(), // spacing to center the image
-                Image.asset(
-                  'assets/graphics/health.png',
-                  fit: BoxFit.contain,
-                  height: 300,
+                Text(
+                  "Near Vision Test",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 34.0,
+                      fontWeight: FontWeight.w400),
                 ),
                 Container(
-                  height: 80,
-                  color: Colors.lightBlue,
-                  child: SizedBox.expand(
-                    child: Center(
-                      child: Text(
-                        "Start",
-                        style: TextStyle(
-                            fontSize: 34.0, fontWeight: FontWeight.w500),
-                      ),
-                    ),
-                  ),
+                  margin: EdgeInsets.all(8),
                 ),
+                Text("Your diagnosis will take about 5 minutes or less.",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontWeight: FontWeight.w500,
+                    )),
               ],
             ),
           ),
-        ),
+          // Start Button
+          Container(
+            height: 80,
+            margin: EdgeInsets.all(16),
+            child: Center(
+              child: Text(
+                "Start",
+                style: TextStyle(fontSize: 34.0, fontWeight: FontWeight.w500),
+              ),
+            ),
+            decoration: BoxDecoration(
+              color: Colors.white,
+              borderRadius: BorderRadius.all(
+                Radius.circular(16),
+              ),
+            ),
+          ),
+        ],
       ),
       onTap: () {
         Navigator.push(
