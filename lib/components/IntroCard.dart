@@ -1,73 +1,84 @@
 import 'package:flutter/material.dart';
-import 'TestCard.dart';
 
+// This Widget is a placeholder for upcoming tests
 class IntroCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      child: Stack(
-        alignment: Alignment.bottomCenter,
-        children: <Widget>[
-          // Image Background
-          Image.asset(
-            'assets/graphics/background.jpg',
-            fit: BoxFit.cover,
-            width: MediaQuery.of(context).size.width,
-            height: MediaQuery.of(context).size.height,
-          ),
-          // Blue Scrim for readability
-          Container(color: Colors.lightBlueAccent.withOpacity(0.6)),
-          // Text Container
-          Container(
-            margin: EdgeInsets.all(8.0),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text(
-                  "Near Vision Test",
-                  textAlign: TextAlign.center,
-                  style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 34.0,
-                      fontWeight: FontWeight.w400),
+      // The grey and thin look makes it less clickable
+      child: Card(
+        child: Container(
+          margin: EdgeInsets.only(left: 16, right: 16),
+          height: MediaQuery.of(context).size.height * 0.6,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Flexible(
+                child: Image.asset(
+                  "assets/graphics/health.png",
+                  fit: BoxFit.contain,
                 ),
-                Container(
-                  margin: EdgeInsets.all(8),
-                ),
-                Text("Your diagnosis will take about 5 minutes or less.",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontWeight: FontWeight.w500,
-                    )),
-              ],
-            ),
-          ),
-          // Start Button
-          Container(
-            height: 80,
-            margin: EdgeInsets.all(16),
-            child: Center(
-              child: Text(
-                "Start",
-                style: TextStyle(fontSize: 34.0, fontWeight: FontWeight.w500),
+                flex: 1,
               ),
-            ),
-            decoration: BoxDecoration(
-              color: Colors.white,
-              borderRadius: BorderRadius.all(
-                Radius.circular(16),
-              ),
-            ),
+              Flexible(
+                  flex: 1,
+                  child: Container(
+                    margin: EdgeInsets.all(16),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.max,
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text(
+                          "Near Vision Diagnosis",
+                          style:
+                              TextStyle(fontSize: 24, fontFamily: 'OpenSans'),
+                        ),
+                        Container(
+                          height: 8,
+                        ),
+                        Text(
+                            "This diagnosis will take about 5 minutes or less.",
+                            textAlign: TextAlign.justify,
+                            style: Theme.of(context).textTheme.caption),
+                        Container(
+                          height: 32,
+                        ),
+                        MaterialButton(
+                          child: Text(
+                            "Start".toUpperCase(),
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontSize: 24,
+                            ),
+                          ),
+                          color: Colors.lightBlueAccent[700],
+                          padding: EdgeInsets.only(
+                              top: 16, right: 64, bottom: 16, left: 64),
+                          shape: StadiumBorder(),
+                          onPressed: () {},
+                        ),
+                      ],
+                    ),
+                  )),
+            ],
           ),
-        ],
+        ),
       ),
       onTap: () {
-        Navigator.push(
-            context,
-            new MaterialPageRoute(
-                builder: (context) =>
-                    new TestCard())); // Clicking on this widget routes the app to the diagnosis page
+        // Clicking on this widget opens a dialog
+        showDialog(
+          context: context,
+          child: new SimpleDialog(
+            title: new Text('Title'),
+            children: <Widget>[
+              Text("loremkl"),
+              new SimpleDialogOption(
+                child: new Text('Thank you!'),
+              ),
+            ],
+          ),
+        );
       },
     );
   }
