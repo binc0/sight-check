@@ -25,7 +25,19 @@ class _HomePageState extends State<HomePage> {
                 style: Theme.of(context).textTheme.title,
               ),
             ),
-            Center(child: IntroCard()),
+            Center(
+              child: Container(
+                height: MediaQuery.of(context).size.height * 0.6,
+                child: PageView(
+                  scrollDirection: Axis.horizontal,
+                  children: <Widget>[
+                    IntroCard(),
+                    IntroCard(),
+                    IntroCard(),
+                  ],
+                ),
+              ),
+            )
           ],
         ),
       ),
