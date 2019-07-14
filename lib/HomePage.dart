@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:sight_check/components/IntroCard.dart';
 import 'package:share/share.dart';
 import 'package:launch_review/launch_review.dart';
@@ -16,10 +17,12 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        backgroundColor: Theme.of(context).scaffoldBackgroundColor,
+        elevation: 0,
         title: const Text("Sight-Check"),
         actions: <Widget>[
           IconButton(
-            icon: Icon(Icons.star),
+            icon: Icon(FontAwesomeIcons.smileBeam),
             onPressed: () {
               LaunchReview.launch(
                   androidAppId: "com.michaeljancen.sight_check",
