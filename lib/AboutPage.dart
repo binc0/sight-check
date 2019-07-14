@@ -24,6 +24,7 @@ class AboutPage extends StatelessWidget {
           children: <Widget>[
             Text(
               "Sight-Check is an app that checks your eyesight for free. I really enjoyed developing this app and helping hundreds of thousands of people! As you can see I decided not to include ads or fees, because I don't see the point in monetizing something essential as helathcare at your costs.\n\nFollow us on Instagram to suggest features or submit technical errors. You can also participate in making Sight-Check better, have a look at our project at Github.",
+              textAlign: TextAlign.justify,
               style: Theme.of(context).textTheme.body2,
             ),
             Container(
