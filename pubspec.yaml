@@ -26,6 +26,8 @@ dependencies:
   share: ^0.5.2
   launch_review: ^2.0.0
   font_awesome_flutter: ^8.0.1
+  url_launcher: ^5.0.5
+  flutter_svg: ^0.13.1
 
 dev_dependencies:
   flutter_test:

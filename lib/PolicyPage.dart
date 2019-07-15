@@ -16,7 +16,7 @@ class PolicyPage extends StatelessWidget {
               onPressed: () => Navigator.pop(context, false),
             )),
         body: Container(
-          margin: EdgeInsets.only(top: 16, right: 64, bottom: 64, left: 64),
+          margin: EdgeInsets.only(top: 16, right: 64, bottom: 32, left: 64),
           child: Column(
             children: <Widget>[
               Expanded(

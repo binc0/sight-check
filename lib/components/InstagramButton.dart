@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class InstagramButton extends StatelessWidget {
   const InstagramButton({Key key}) : super(key: key);
@@ -26,7 +27,18 @@ class InstagramButton extends StatelessWidget {
       color: Color(0xffe4405f),
       padding: EdgeInsets.only(top: 16, right: 64, bottom: 16, left: 64),
       shape: StadiumBorder(),
-      onPressed: () {},
+      onPressed: () {
+        _launchURL();
+      },
     );
+  }
+
+  _launchURL() async {
+    const url = "https://instagram.com/sightcheck.app";
+    if (await canLaunch(url)) {
+      await launch(url);
+    } else {
+      throw "Could not launch $url";
+    }
   }
 }
