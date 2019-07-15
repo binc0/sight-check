@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage> {
         margin: EdgeInsets.all(16),
         child: Center(
           child: Container(
-            height: MediaQuery.of(context).size.height * 0.6,
+            height: MediaQuery.of(context).size.height * 0.7,
             child: PageView(
               scrollDirection: Axis.horizontal,
               children: <Widget>[
