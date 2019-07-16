@@ -1,16 +1,35 @@
-# sight_check
+# Sight-Check
 
-A new Flutter project.
+[![Codemagic build status](https://api.codemagic.io/apps/5d2b97a1a39dd76aa3cc12e8/5d2b97a1a39dd76aa3cc12e7/status_badge.svg)](https://codemagic.io/apps/5d2b97a1a39dd76aa3cc12e8/5d2b97a1a39dd76aa3cc12e7/latest_build)
 
-## Getting Started
+<a href='https://play.google.com/store/apps/details?id=com.michaeljancen.sight_check&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' height="80"/></a>
 
-This project is a starting point for a Flutter application.
+🏥 Check your eyesight for free anywhere, anytime.
 
-A few resources to get you started if this is your first Flutter project:
+😊 Already used by 170,000+ customers.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+🌍 Available in 13 languages:
+- ❤ English
+- ❤ Hindi
+- ❤ Arabic
+- ❤ Spanish
+- ❤ German
+- ❤ French
+- ❤ Turkish
+- ❤ Russian
+- ❤ Japanese
+- ❤ Portuguese
+- ❤ Italian
+- ❤ Malay
+- ❤ Chinese
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+👨🏼‍⚕️ Medical disclaimer: This app does not replace professional medical advice, diagnosis, or treatment.
+      
+      
+### Contact
+To ask a question, or to discuss information, please use contact@michaeljancen.com to contact Michael.
+
+### License
+The MIT License (MIT)
+
+Copyright (c) 2019 Michael Jancen-Widmer
