@@ -1,4 +1,4 @@
-package com.example.sight_check;
+package com.michaeljancen.sight_check;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;

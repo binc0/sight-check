@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 // This Widget is a placeholder for upcoming tests
 class IntroCard extends StatefulWidget {
@@ -33,9 +34,9 @@ class _IntroCardState extends State<IntroCard>
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            Image.asset(
-              "assets/graphics/health.png",
-              fit: BoxFit.contain,
+            SvgPicture.asset(
+              "assets/graphics/doctor.svg",
+              height: 200,
             ),
             Container(
               margin: EdgeInsets.all(16),
