@@ -24,9 +24,10 @@ class EyeCard extends StatelessWidget {
             Transform(
               transform: Matrix4.identity()..rotateY(emojiMap[this.eye]),
               alignment: FractionalOffset.center,
-              child: Text(
-                "😉",
-                style: TextStyle(fontSize: 112, fontFamily: 'OpenSans'),
+              child: CircleAvatar(
+                backgroundImage:
+                    ExactAssetImage("assets/graphics/cool-kid.jpg"),
+                radius: 140,
               ),
             ),
             MaterialButton(
