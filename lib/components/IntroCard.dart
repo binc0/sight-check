@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:sight_check/ChartModel.dart';
 
 // This Widget is a placeholder for upcoming tests
 class IntroCard extends StatefulWidget {
-  IntroCard({Key key}) : super(key: key);
+  IntroCard(this.model);
+  ChartModel model;
 
   @override
   _IntroCardState createState() => _IntroCardState();
@@ -70,7 +72,7 @@ class _IntroCardState extends State<IntroCard>
                         top: 16, right: 64, bottom: 16, left: 64),
                     shape: StadiumBorder(),
                     onPressed: () {
-                      animationController.forward();
+                      widget.model.nextPage();
                     },
                   ),
                 ],

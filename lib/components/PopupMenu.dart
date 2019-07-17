@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:sight_check/AboutPage.dart';
-import 'package:sight_check/PolicyPage.dart';
-import 'package:sight_check/TermsPage.dart';
 import 'package:sight_check/components/Constants.dart';
+import 'package:sight_check/pages/AboutPage.dart';
+import 'package:sight_check/pages/PolicyPage.dart';
+import 'package:sight_check/pages/TermsPage.dart';
 
 class PopupMenu extends StatefulWidget {
   PopupMenu({Key key}) : super(key: key);
