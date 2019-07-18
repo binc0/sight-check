@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sight_check/ChartModel.dart';
 
 class TestCard extends StatelessWidget {
@@ -15,7 +16,10 @@ class TestCard extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            Text("${model.distance}"),
+            SvgPicture.asset(
+              "assets/graphics/landolt-ring.svg",
+              height: this.model.ringHeight,
+            ),
             MaterialButton(
               child: Text(
                 "Next".toUpperCase(),

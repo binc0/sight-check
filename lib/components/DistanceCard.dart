@@ -37,8 +37,8 @@ class _DistanceState extends State<DistanceCard> {
           ),
           FlutterSlider(
             values: [widget.model.distance],
-            max: 60,
-            min: 30,
+            max: 50,
+            min: 25,
             onDragging: (handlerIndex, lowerValue, upperValue) {
               setState(() {
                 widget.model.distance = lowerValue;
@@ -57,6 +57,7 @@ class _DistanceState extends State<DistanceCard> {
             padding: EdgeInsets.only(top: 16, right: 64, bottom: 16, left: 64),
             shape: StadiumBorder(),
             onPressed: () {
+              widget.model.setHeight(MediaQuery.of(context).devicePixelRatio);
               widget.model.nextPage();
             },
           ),
