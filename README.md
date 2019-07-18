@@ -8,26 +8,17 @@
 
 😊 Already used by 170,000+ customers.
 
-🌍 Available in 13 languages:
-- ❤ English
-- ❤ Hindi
-- ❤ Arabic
-- ❤ Spanish
-- ❤ German
-- ❤ French
-- ❤ Turkish
-- ❤ Russian
-- ❤ Japanese
-- ❤ Portuguese
-- ❤ Italian
-- ❤ Malay
-- ❤ Chinese
+📄 Complies with the European Norm for acuity testing (<a href="https://www.beuth.de/en/draft-standard/din-en-iso-8596/259414231">EN ISO 8596</a>).
+
+🌍 Available in: English, Hindi, Arabic, Spanish, German, French, Turkish, Russian, Japanese, Portuguese, Italian, Malay and Chinese.
+
+
 
 👨🏼‍⚕️ Medical disclaimer: This app does not replace professional medical advice, diagnosis, or treatment.
       
       
 ### Contact
-To ask a question, or to discuss information, please use contact@michaeljancen.com to contact Michael.
+To ask a question, or to discuss information, please use contact@michaeljancen.com.
 
 ### License
 The MIT License (MIT)
