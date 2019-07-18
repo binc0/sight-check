@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sight_check/ChartModel.dart';
+import 'dart:math' as math;
 
 class TestCard extends StatelessWidget {
   TestCard(this.model);
@@ -16,9 +17,12 @@ class TestCard extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            SvgPicture.asset(
-              "assets/graphics/landolt-ring.svg",
-              height: this.model.ringHeight,
+            Transform.rotate(
+              angle: (math.pi),
+              child: SvgPicture.asset(
+                "assets/graphics/landolt-ring.svg",
+                height: this.model.ringHeight,
+              ),
             ),
             MaterialButton(
               child: Text(
