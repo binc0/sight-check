@@ -12,33 +12,31 @@ class TestCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return Card(
       child: Container(
-        margin: EdgeInsets.only(left: 16, right: 16),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            Transform.rotate(
-              angle: (math.pi),
-              child: SvgPicture.asset(
-                "assets/graphics/landolt-ring.svg",
-                height: this.model.ringHeight,
-              ),
-            ),
-            MaterialButton(
-              child: Text(
-                "Next".toUpperCase(),
-                style: TextStyle(
-                  color: Colors.white,
-                  fontSize: 24,
+            Expanded(
+              flex: 4,
+              child: Transform.rotate(
+                angle: (math.pi),
+                child: SvgPicture.asset(
+                  "assets/graphics/landolt-ring.svg",
+                  height: this.model.ringHeight,
                 ),
               ),
-              color: Colors.lightBlueAccent[700],
-              padding:
-                  EdgeInsets.only(top: 16, right: 64, bottom: 16, left: 64),
-              shape: StadiumBorder(),
-              onPressed: () {
-                model.nextPage();
-              },
+            ),
+            Expanded(
+              flex: 6,
+              child: Container(
+                padding: EdgeInsets.all(16),
+                width: double.infinity,
+                color: Theme.of(context).accentColor,
+                child: SvgPicture.asset(
+                  "assets/graphics/test-ring.svg",
+                  height: this.model.ringHeight,
+                ),
+              ),
             ),
           ],
         ),

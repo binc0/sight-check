@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:screen/screen.dart';
 import 'package:sight_check/ChartModel.dart';
 
 // This Widget is a placeholder for upcoming tests
@@ -25,6 +26,7 @@ class _IntroCardState extends State<IntroCard>
       ..addListener(() {
         setState(() {});
       });
+    setupScreenBrightness();
   }
 
   @override
@@ -82,5 +84,15 @@ class _IntroCardState extends State<IntroCard>
         ),
       ),
     );
+  }
+
+  setupScreenBrightness() async {
+    // Get the current brightness
+    double brightness = await Screen.brightness;
+
+    // Set the brightness to at least 200 cd/m^2 (average value of todays mobile devices)
+    if (brightness <= 0.6) {
+      Screen.setBrightness(0.6);
+    }
   }
 }
