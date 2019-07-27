@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:screen/screen.dart';
-import 'package:sight_check/ChartModel.dart';
+import 'package:sight_check/pages/NearVisionPage.dart';
 
 // This Widget is a placeholder for upcoming tests
 class IntroCard extends StatefulWidget {
-  IntroCard(this.model);
-  ChartModel model;
+  IntroCard({Key key}) : super(key: key);
 
   @override
   _IntroCardState createState() => _IntroCardState();
@@ -74,7 +73,11 @@ class _IntroCardState extends State<IntroCard>
                         top: 16, right: 64, bottom: 16, left: 64),
                     shape: StadiumBorder(),
                     onPressed: () {
-                      widget.model.nextPage();
+                      Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                            builder: (context) => NearVisionPage()),
+                      );
                     },
                   ),
                 ],

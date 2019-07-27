@@ -49,7 +49,7 @@ class _TestCardState extends State<TestCard> {
 
   @override
   void initState() {
-    super.initState();
+    // super.initState();
     Random rnd = new Random();
     int min = 0;
     int max = rotations.length;
@@ -58,12 +58,21 @@ class _TestCardState extends State<TestCard> {
 
   @override
   Widget build(BuildContext context) {
+    widget.model.setHeight(MediaQuery.of(context).devicePixelRatio);
+    double progress = widget.model.totalGuesses / widget.model.totalAmount;
+    if (widget.model.totalGuesses >= 20) {
+      progress = (widget.model.totalGuesses - 20) / widget.model.totalAmount;
+    }
+
     return Card(
       child: Container(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
+            LinearProgressIndicator(
+              value: progress,
+            ),
             Expanded(
               flex: 4,
               child: Transform.rotate(
@@ -174,11 +183,8 @@ class _TestCardState extends State<TestCard> {
 
   // Check whether the guess is correct and update the ChartModel
   guess() {
-    if (currentPosition == testPosition) {
-      this.widget.model.correctAnswer();
-    } else {
-      this.widget.model.wrongAnswer();
-    }
+    bool isGuessCorrect = (currentPosition == testPosition) ? true : false;
+    this.widget.model.guess(isGuessCorrect);
     this.widget.model.nextPage();
   }
 }

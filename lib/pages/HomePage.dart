@@ -1,14 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:scoped_model/scoped_model.dart';
-import 'package:sight_check/ChartModel.dart';
-import 'package:sight_check/components/DistanceCard.dart';
-import 'package:sight_check/components/EyeCard.dart';
-import 'package:sight_check/components/IntroCard.dart';
 import 'package:share/share.dart';
 import 'package:launch_review/launch_review.dart';
+import 'package:sight_check/components/IntroCard.dart';
 import 'package:sight_check/components/PopupMenu.dart';
-import 'package:sight_check/components/TestCard.dart';
 
 class HomePage extends StatefulWidget {
   HomePage({Key key}) : super(key: key);
@@ -49,24 +44,7 @@ class _HomePageState extends State<HomePage> {
         child: Center(
           child: Container(
             height: MediaQuery.of(context).size.height * 0.7,
-            child: ScopedModel<ChartModel>(
-              model: new ChartModel(),
-              child: ScopedModelDescendant<ChartModel>(
-                builder: (context, child, model) => PageView(
-                  controller: model.controller,
-                  scrollDirection: Axis.horizontal,
-                  physics: new NeverScrollableScrollPhysics(),
-                  children: <Widget>[
-                    IntroCard(model),
-                    DistanceCard(model),
-                    EyeCard("left", model),
-                    TestCard(model),
-                    EyeCard("right", model),
-                    TestCard(model),
-                  ],
-                ),
-              ),
-            ),
+            child: IntroCard(),
           ),
         ),
       ),

@@ -18,37 +18,49 @@ class ChartModel extends Model {
     {"acuity": 80.0, "arc": 1.26},
     {"acuity": 100.0, "arc": 1.00},
   ];
-  int chartStepIndex = 4; // Current difficulty
-  int _positiveLetters = 0; // Correct guessed letters
-  int _wrongLettersInAStep = 0; // Wrong guessed letters in a row
-  int _totalGuesses = 0; // Total attempts in test
-  int _totalLetters = 30; // Total letters in test
+  int chartDifficulty = 4; // Current difficulty
+  int totalGuesses = 0; // Total attempts in test
+  int _correctGuesses = 0; // Correct guessed letters
+  int _wrongGuesses = 0; // Wrong guessed letters in a row
+  final int totalAmount = 20; // Total TestCards in test
   double distance = 30.0; // Default distance to device
   double ringHeight =
       31.5; // Default height of Landolt chart for 30cm at VA=0.5 in dp
   PageController controller = PageController();
+  bool isLeftEye = true;
+  double leftAcuity, rightAcuity;
 
-  // Use these to calculate result
-  int get positiveLetters => _positiveLetters;
-  int get totalLetters => _totalLetters;
-
-  void correctAnswer() {
-    _totalGuesses++; // Increment result by one correct letter
-    _positiveLetters++; // Reset how many attempts have been wrong in a row
-
-    if (_totalGuesses == _totalLetters) {
-      // TODO: Finish the test with current score
-      notifyListeners();
+  void guess(bool isGuessCorrect) {
+    totalGuesses++; // Increment result by one correct letter
+    if (isGuessCorrect) {
+      _correctGuesses++;
+    } else {
+      _wrongGuesses++;
     }
-  }
-
-  void wrongAnswer() {
-    _totalGuesses++;
-    _wrongLettersInAStep++;
-    if (_wrongLettersInAStep >= 3) {
-      // TODO Finish test
-      notifyListeners();
+    // Check whether the tests for on one eye have been completed
+    if (totalGuesses % totalAmount == 0) {
+      if (isLeftEye) {
+        leftAcuity = chartSteps[chartDifficulty]["acuity"];
+        isLeftEye = false;
+        chartDifficulty = 4;
+        print("Left: " + leftAcuity.toString() + "%");
+      } else {
+        rightAcuity = chartSteps[chartDifficulty]["acuity"];
+        print("Right: " + rightAcuity.toString() + "%");
+      }
     }
+    // Change difficulty after five representations
+    else if (totalGuesses % 5 == 0) {
+      if (_correctGuesses > _wrongGuesses) {
+        chartDifficulty++;
+      } else {
+        chartDifficulty--;
+      }
+      _correctGuesses = 0;
+      _wrongGuesses = 0;
+    }
+    print("TotalGuesses: " + totalGuesses.toString());
+    notifyListeners();
   }
 
   // Navigate to the next element in PageView
@@ -63,19 +75,14 @@ class ChartModel extends Model {
    *  Example: A 20/20 Letter at 4m distance would be 5.82mm big
    */
   calculateHeight() {
-    double height =
-        5 * this.distance * tan(chartSteps[chartStepIndex]["arc"] / 60);
-    print("Height: " + height.toString());
-    return height;
+    return 5 * this.distance * tan(chartSteps[chartDifficulty]["arc"] / 60);
   }
 
   // Set the height of the Landolt ring
   setHeight(double ratio) {
-    // TODO keep track of visual acuity steps and increase / decrease
     double height = calculateHeight();
     double inch = height / 2.54; // cm -> in conversion
     this.ringHeight =
         (inch * baseDPI * ratio) / ratio / 10; // in -> dp conversion
-    print("ring in dp: " + ringHeight.toString());
   }
 }
