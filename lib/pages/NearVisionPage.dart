@@ -3,6 +3,7 @@ import 'package:scoped_model/scoped_model.dart';
 import 'package:sight_check/ChartModel.dart';
 import 'package:sight_check/components/DistanceCard.dart';
 import 'package:sight_check/components/EyeCard.dart';
+import 'package:sight_check/components/ResultCard.dart';
 import 'package:sight_check/components/TestCard.dart';
 
 class NearVisionPage extends StatefulWidget {
@@ -71,6 +72,7 @@ class _NearVisionPageState extends State<NearVisionPage> {
               TestCard(model),
               TestCard(model),
               TestCard(model),
+              ResultCard(model),
             ],
           ),
         ),
