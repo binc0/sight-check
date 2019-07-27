@@ -67,14 +67,23 @@ class _TestCardState extends State<TestCard> {
               child: Container(
                 padding: EdgeInsets.all(16),
                 width: double.infinity,
-                color: Theme.of(context).accentColor,
+                color: Colors.grey[500],
                 child: GestureDetector(
                   child: Transform.rotate(
                     alignment: FractionalOffset.center,
                     angle: rotation,
-                    child: SvgPicture.asset(
-                      "assets/graphics/test-shape.svg",
-                      height: widget.model.ringHeight,
+                    child: Stack(
+                      fit: StackFit.expand,
+                      children: <Widget>[
+                        SvgPicture.asset(
+                          "assets/graphics/dots.svg",
+                          height: widget.model.ringHeight,
+                        ),
+                        SvgPicture.asset(
+                          "assets/graphics/test-ring.svg",
+                          height: widget.model.ringHeight,
+                        ),
+                      ],
                     ),
                   ),
                   onScaleUpdate: (updateDetails) {
