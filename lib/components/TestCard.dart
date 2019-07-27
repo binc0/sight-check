@@ -1,3 +1,4 @@
+import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:sight_check/ChartModel.dart';
@@ -44,6 +45,17 @@ class _TestCardState extends State<TestCard> {
   ];
   int currentPosition = 2; // Set the default shape orientation
   int previousPosition; // Remember the previous position so that the Widget knows when to update state
+  int testPosition; // The position that has to be guessed
+
+  @override
+  void initState() {
+    super.initState();
+    Random rnd = new Random();
+    int min = 0;
+    int max = rotations.length;
+    this.testPosition = min + rnd.nextInt(max - min);
+  }
+
   @override
   Widget build(BuildContext context) {
     return Card(
@@ -55,7 +67,7 @@ class _TestCardState extends State<TestCard> {
             Expanded(
               flex: 4,
               child: Transform.rotate(
-                angle: (math.pi),
+                angle: rotations[testPosition],
                 child: SvgPicture.asset(
                   "assets/graphics/landolt-ring.svg",
                   height: widget.model.ringHeight,
@@ -67,7 +79,7 @@ class _TestCardState extends State<TestCard> {
               child: Container(
                 padding: EdgeInsets.all(16),
                 width: double.infinity,
-                color: Colors.grey[500],
+                color: Colors.grey[200],
                 child: GestureDetector(
                   child: Transform.rotate(
                     alignment: FractionalOffset.center,
@@ -134,9 +146,10 @@ class _TestCardState extends State<TestCard> {
                       setState(() => rotation = rotations[currentPosition]);
                     }
                   },
-                  // onScaleEnd: (scaleEndDetails) {
-                  //   _previousScale = null;
-                  // },
+                  // Called when user chooses a letter rotation
+                  onScaleEnd: (scaleEndDetails) {
+                    guess();
+                  },
                 ),
               ),
             ),
@@ -157,5 +170,15 @@ class _TestCardState extends State<TestCard> {
     } else {
       return radian;
     }
+  }
+
+  // Check whether the guess is correct and update the ChartModel
+  guess() {
+    if (currentPosition == testPosition) {
+      this.widget.model.correctAnswer();
+    } else {
+      this.widget.model.wrongAnswer();
+    }
+    this.widget.model.nextPage();
   }
 }

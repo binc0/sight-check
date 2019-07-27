@@ -55,6 +55,7 @@ class _HomePageState extends State<HomePage> {
                 builder: (context, child, model) => PageView(
                   controller: model.controller,
                   scrollDirection: Axis.horizontal,
+                  physics: new NeverScrollableScrollPhysics(),
                   children: <Widget>[
                     IntroCard(model),
                     DistanceCard(model),
