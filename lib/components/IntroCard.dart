@@ -40,7 +40,7 @@ class _IntroCardState extends State<IntroCard>
           children: <Widget>[
             SvgPicture.asset(
               "assets/graphics/doctor.svg",
-              height: 200,
+              height: MediaQuery.of(context).size.height * 0.25,
             ),
             Container(
               margin: EdgeInsets.all(16),
@@ -52,6 +52,7 @@ class _IntroCardState extends State<IntroCard>
                     AppLocalizations.of(context)
                         .translate('near-vision-diagnosis'),
                     style: TextStyle(fontSize: 24, fontFamily: 'OpenSans'),
+                    textAlign: TextAlign.center,
                   ),
                   Container(
                     height: 8,

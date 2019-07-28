@@ -26,6 +26,7 @@ class _DistanceState extends State<DistanceCard> {
               Text(
                 AppLocalizations.of(context).translate('distance-description'),
                 style: TextStyle(fontSize: 24, fontFamily: 'OpenSans'),
+                textAlign: TextAlign.center,
               ),
               Container(
                 height: 8,

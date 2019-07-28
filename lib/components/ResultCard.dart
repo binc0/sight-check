@@ -42,11 +42,12 @@ class ResultCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
                     Text(
-                      "${this.model.leftAcuity}%",
+                      // "${this.model.leftAcuity}%",
+                      "100%",
                       style: Theme.of(context).textTheme.display2,
                     ),
                     Text(
-                      "${this.model.rightAcuity}%",
+                      "80%", //"${this.model.rightAcuity}%",
                       style: Theme.of(context).textTheme.display2,
                     ),
                   ],
@@ -62,6 +63,7 @@ class ResultCard extends StatelessWidget {
                 Text(
                   AppLocalizations.of(context).translate('medical-disclaimer'),
                   style: Theme.of(context).textTheme.caption,
+                  textAlign: TextAlign.center,
                 )
               ],
             ),

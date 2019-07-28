@@ -21,6 +21,7 @@ class EyeCard extends StatelessWidget {
             Text(
               AppLocalizations.of(context).translate("close-${this.eye}"),
               style: TextStyle(fontSize: 24, fontFamily: 'OpenSans'),
+              textAlign: TextAlign.center,
             ),
             Transform(
               transform: Matrix4.identity()..rotateY(emojiMap[this.eye]),
