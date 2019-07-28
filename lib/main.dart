@@ -41,14 +41,17 @@ class MyApp extends StatelessWidget {
       ],
       // Returns a locale which will be used by the app
       localeResolutionCallback: (locale, supportedLocales) {
+        if (locale == null) {
+          return supportedLocales.first;
+        }
+
         // Check if the current device locale is supported
-        for (var supportedLocale in supportedLocales) {
+        for (Locale supportedLocale in supportedLocales) {
           if (supportedLocale.languageCode == locale.languageCode) {
             return supportedLocale;
           }
         }
-        // If the locale of the device is not supported, use the first one
-        // from the list (English, in this case).
+
         return supportedLocales.first;
       },
       home: HomePage(),

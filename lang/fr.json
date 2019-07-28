@@ -1,0 +1,19 @@
+{
+  "about": "À propos de nous",
+  "about-text": "J'ai vraiment apprécié développer Sight-Check pendant plus d'un an et aider autant de personnes! Comme vous pouvez le constater, j'ai décidé de ne pas inclure de publicité ni de frais, car les soins de santé devraient être gratuits pour vous!  n  nC'est pourquoi j'ai ouvert le code source, ce qui signifie que le code est libre d'utilisation et d'exploration pour tout le monde. Suivez Sight-Check sur Instagram pour suggérer des fonctionnalités ou participez à l'amélioration de Sight-Check en visitant notre projet à Github.",
+  "close-left": "S'il vous plaît fermez votre oeil gauche",
+  "close-right": "S'il vous plaît fermez votre oeil droit",
+  "contribute": "Contribuer",
+  "diagnosis-description": "Ce diagnostic prendra environ 5 minutes ou moins.",
+  "distance-description": "Choisissez la distance à l'appareil",
+  "follow-us": "Suivez nous",
+  "left": "gauche",
+  "medical-disclaimer": "Cette application ne peut pas remplacer un avis médical.",
+  "near-vision-diagnosis": "Diagnostic de vision de près",
+  "next": "Prochain",
+  "rate-us": "Évaluer l'application",
+  "right": "droit",
+  "share-text": "Bonjour, j'ai utilisé Sight-Check pour tester ma vue: https://sightcheck.de",
+  "start": "Début",
+  "your-result": "Ton résultat"
+}
