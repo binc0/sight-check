@@ -30,7 +30,6 @@ class _NearVisionPageState extends State<NearVisionPage> {
             children: <Widget>[
               // I will have to read some documentation to remove that spaghetti code..
               DistanceCard(model),
-              ResultCard(model),
               EyeCard("left", model),
               TestCard(model),
               TestCard(model),

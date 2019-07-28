@@ -42,12 +42,11 @@ class ResultCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
                     Text(
-                      // "${this.model.leftAcuity}%",
-                      "100%",
+                      "${this.model.leftAcuity}%",
                       style: Theme.of(context).textTheme.display2,
                     ),
                     Text(
-                      "80%", //"${this.model.rightAcuity}%",
+                      "${this.model.rightAcuity}%",
                       style: Theme.of(context).textTheme.display2,
                     ),
                   ],
