@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_xlider/flutter_xlider.dart';
 import 'package:sight_check/ChartModel.dart';
+import 'package:sight_check/AppLocalizations.dart';
 
 class DistanceCard extends StatefulWidget {
   DistanceCard(this.model);
@@ -23,7 +24,7 @@ class _DistanceState extends State<DistanceCard> {
           Column(
             children: <Widget>[
               Text(
-                "Choose distance to device",
+                AppLocalizations.of(context).translate('distance-description'),
                 style: TextStyle(fontSize: 24, fontFamily: 'OpenSans'),
               ),
               Container(
@@ -47,7 +48,7 @@ class _DistanceState extends State<DistanceCard> {
           ),
           MaterialButton(
             child: Text(
-              "Next".toUpperCase(),
+              AppLocalizations.of(context).translate('next').toUpperCase(),
               style: TextStyle(
                 color: Colors.white,
                 fontSize: 24,

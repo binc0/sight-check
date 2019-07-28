@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:sight_check/AppLocalizations.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class GithubButton extends StatelessWidget {
@@ -16,7 +17,7 @@ class GithubButton extends StatelessWidget {
             width: 16,
           ),
           Text(
-            "Contribute".toUpperCase(),
+            AppLocalizations.of(context).translate('contribute').toUpperCase(),
             style: TextStyle(
               color: Colors.white,
               fontSize: 18,

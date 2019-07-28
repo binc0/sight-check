@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sight_check/ChartModel.dart';
+import 'package:sight_check/AppLocalizations.dart';
 
 class EyeCard extends StatelessWidget {
   EyeCard(this.eye, this.model);
@@ -18,7 +19,7 @@ class EyeCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             Text(
-              "Please close your ${this.eye} eye",
+              AppLocalizations.of(context).translate("close-${this.eye}"),
               style: TextStyle(fontSize: 24, fontFamily: 'OpenSans'),
             ),
             Transform(
@@ -32,7 +33,7 @@ class EyeCard extends StatelessWidget {
             ),
             MaterialButton(
               child: Text(
-                "Next".toUpperCase(),
+                AppLocalizations.of(context).translate('next').toUpperCase(),
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 24,

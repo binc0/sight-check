@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:launch_review/launch_review.dart';
+import 'package:sight_check/AppLocalizations.dart';
 
 class RateButton extends StatelessWidget {
   const RateButton({Key key}) : super(key: key);
@@ -16,7 +17,7 @@ class RateButton extends StatelessWidget {
             width: 16,
           ),
           Text(
-            "Rate this app".toUpperCase(),
+            AppLocalizations.of(context).translate('rate-us').toUpperCase(),
             style: TextStyle(
               color: Colors.white,
               fontSize: 18,

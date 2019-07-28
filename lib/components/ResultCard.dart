@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:sight_check/ChartModel.dart';
+import 'package:sight_check/AppLocalizations.dart';
 import 'package:sight_check/components/RateButton.dart';
 
 class ResultCard extends StatelessWidget {
@@ -16,7 +17,7 @@ class ResultCard extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
             Text(
-              "Your result",
+              AppLocalizations.of(context).translate('your-result'),
               style: Theme.of(context).textTheme.headline,
             ),
             Column(
@@ -25,11 +26,11 @@ class ResultCard extends StatelessWidget {
                   mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: <Widget>[
                     Text(
-                      "Left",
+                      AppLocalizations.of(context).translate('left'),
                       style: TextStyle(fontSize: 20),
                     ),
                     Text(
-                      "Right",
+                      AppLocalizations.of(context).translate('right'),
                       style: TextStyle(fontSize: 20),
                     ),
                   ],
@@ -59,7 +60,7 @@ class ResultCard extends StatelessWidget {
                   height: 32,
                 ),
                 Text(
-                  "This app can not replace a medical advice.",
+                  AppLocalizations.of(context).translate('medical-disclaimer'),
                   style: Theme.of(context).textTheme.caption,
                 )
               ],

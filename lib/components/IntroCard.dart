@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:screen/screen.dart';
+import 'package:sight_check/AppLocalizations.dart';
 import 'package:sight_check/pages/NearVisionPage.dart';
 
 // This Widget is a placeholder for upcoming tests
@@ -48,13 +49,16 @@ class _IntroCardState extends State<IntroCard>
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: <Widget>[
                   Text(
-                    "Near Vision Diagnosis",
+                    AppLocalizations.of(context)
+                        .translate('near-vision-diagnosis'),
                     style: TextStyle(fontSize: 24, fontFamily: 'OpenSans'),
                   ),
                   Container(
                     height: 8,
                   ),
-                  Text("This diagnosis will take about 5 minutes or less.",
+                  Text(
+                      AppLocalizations.of(context)
+                          .translate('diagnosis-description'),
                       textAlign: TextAlign.justify,
                       style: Theme.of(context).textTheme.caption),
                   Container(
@@ -62,7 +66,9 @@ class _IntroCardState extends State<IntroCard>
                   ),
                   MaterialButton(
                     child: Text(
-                      "Start".toUpperCase(),
+                      AppLocalizations.of(context)
+                          .translate('start')
+                          .toUpperCase(),
                       style: TextStyle(
                         color: Colors.white,
                         fontSize: 24,

@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:sight_check/AppLocalizations.dart';
 import 'package:sight_check/components/GithubButton.dart';
 import 'package:sight_check/components/InstagramButton.dart';
 
@@ -11,7 +12,7 @@ class AboutPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text("About"),
+          title: Text(AppLocalizations.of(context).translate('about')),
           backgroundColor: Theme.of(context).scaffoldBackgroundColor,
           elevation: 0,
           leading: IconButton(
@@ -33,7 +34,7 @@ class AboutPage extends StatelessWidget {
                 height: 32,
               ),
               Text(
-                "I really enjoyed developing Sight-Check for over a year and helping so many people! As you can see I decided not to include ads or fees, because I don't see the point in monetizing something essential as helathcare at your costs.\n\nThat's why I open-sourced the code, which means the code is free for everyone to use and explore. Follow Sight-Check on Instagram to suggest features or participate in making Sight-Check better, by visiting our project at Github.",
+                AppLocalizations.of(context).translate('about-text'),
                 textAlign: TextAlign.justify,
                 style: Theme.of(context).textTheme.body1,
               ),

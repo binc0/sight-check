@@ -43,10 +43,8 @@ class ChartModel extends Model {
         leftAcuity = chartSteps[chartDifficulty]["acuity"];
         isLeftEye = false;
         chartDifficulty = 4;
-        print("Left: " + leftAcuity.toString() + "%");
       } else {
         rightAcuity = chartSteps[chartDifficulty]["acuity"];
-        print("Right: " + rightAcuity.toString() + "%");
       }
     }
     // Change difficulty after five representations
@@ -59,7 +57,6 @@ class ChartModel extends Model {
       _correctGuesses = 0;
       _wrongGuesses = 0;
     }
-    print("TotalGuesses: " + totalGuesses.toString());
     notifyListeners();
   }
 

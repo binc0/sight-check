@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:share/share.dart';
 import 'package:launch_review/launch_review.dart';
+import 'package:sight_check/AppLocalizations.dart';
 import 'package:sight_check/components/IntroCard.dart';
 import 'package:sight_check/components/PopupMenu.dart';
 
@@ -32,8 +33,7 @@ class _HomePageState extends State<HomePage> {
           IconButton(
             icon: Icon(Icons.share),
             onPressed: () {
-              Share.share(
-                  'Hi, I used this app to check my eyesight and you can do it too https://sightcheck.de');
+              Share.share(AppLocalizations.of(context).translate('share-text'));
             },
           ),
           PopupMenu(),

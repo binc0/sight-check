@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:sight_check/AppLocalizations.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class InstagramButton extends StatelessWidget {
@@ -16,7 +17,7 @@ class InstagramButton extends StatelessWidget {
             width: 16,
           ),
           Text(
-            "Follow us".toUpperCase(),
+            AppLocalizations.of(context).translate('follow-us').toUpperCase(),
             style: TextStyle(
               color: Colors.white,
               fontSize: 18,
