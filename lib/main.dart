@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:sight_check/AppLocalizations.dart';
 import 'package:sight_check/pages/HomePage.dart';
@@ -8,6 +9,10 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    SystemChrome.setPreferredOrientations([
+      DeviceOrientation.portraitUp,
+      DeviceOrientation.portraitDown,
+    ]);
     return MaterialApp(
       title: 'Sight-Check',
       debugShowCheckedModeBanner: false,
@@ -47,7 +52,8 @@ class MyApp extends StatelessWidget {
 
         // Check if the current device locale is supported
         for (Locale supportedLocale in supportedLocales) {
-          if (supportedLocale.languageCode == locale.languageCode || supportedLocale.countryCode == locale.countryCode) {
+          if (supportedLocale.languageCode == locale.languageCode ||
+              supportedLocale.countryCode == locale.countryCode) {
             return supportedLocale;
           }
         }

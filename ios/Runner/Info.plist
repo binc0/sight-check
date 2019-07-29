@@ -8,6 +8,22 @@
 	<string>Sight-Check</string>
 	<key>CFBundleExecutable</key>
 	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleLocalizations</key>
+	<array>
+	    <string>English</string>
+		<string>hi</string>
+		<string>ar</string>
+		<string>es</string>
+		<string>de</string>
+		<string>fr</string>
+		<string>tr</string>
+		<string>ru</string>
+		<string>ja</string>
+		<string>pt</string>
+	    <string>it</string>
+	    <string>ms</string>
+	    <string>zh</string>
+	</array>
 	<key>CFBundleIdentifier</key>
 	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
 	<key>CFBundleInfoDictionaryVersion</key>

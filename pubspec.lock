@@ -71,14 +71,14 @@ packages:
       name: flutter_xlider
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "2.4.5"
+    version: "2.5.1"
   font_awesome_flutter:
     dependency: "direct main"
     description:
       name: font_awesome_flutter
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "8.4.0"
+    version: "8.5.0"
   intl:
     dependency: transitive
     description:
@@ -230,7 +230,7 @@ packages:
       name: url_launcher
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "5.0.5"
+    version: "5.1.1"
   vector_math:
     dependency: transitive
     description:

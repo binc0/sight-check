@@ -27,7 +27,7 @@ class _HomePageState extends State<HomePage> {
             onPressed: () {
               LaunchReview.launch(
                   androidAppId: "com.michaeljancen.sight_check",
-                  iOSAppId: "585027354");
+                  iOSAppId: "1473118871");
             },
           ),
           IconButton(
