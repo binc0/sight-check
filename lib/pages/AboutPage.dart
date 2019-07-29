@@ -28,7 +28,7 @@ class AboutPage extends StatelessWidget {
             children: <Widget>[
               SvgPicture.asset(
                 "assets/graphics/work.svg",
-                height: 200,
+                height: MediaQuery.of(context).size.height * 0.2,
               ),
               Container(
                 height: 32,
