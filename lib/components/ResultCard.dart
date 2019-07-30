@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:sight_check/ChartModel.dart';
 import 'package:sight_check/AppLocalizations.dart';
 import 'package:sight_check/components/RateButton.dart';
+import 'package:sight_check/components/ShareButton.dart';
 
 class ResultCard extends StatelessWidget {
   ChartModel model;
@@ -56,6 +57,10 @@ class ResultCard extends StatelessWidget {
             Column(
               children: <Widget>[
                 RateButton(),
+                Container(
+                  height: 8,
+                ),
+                ShareButton(),
                 Container(
                   height: 32,
                 ),
