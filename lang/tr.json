@@ -1,12 +1,12 @@
 {
-  "about": "Bizim hakkımızda",
-  "about-text": "Bir yılı aşkın bir süredir Sight-Check geliştirmekten ve bu kadar çok kişiye yardım etmekten gerçekten zevk aldım! Gördüğünüz gibi, reklamları veya ücretleri dahil etmemeye karar verdim, çünkü sağlık hizmeti sizin için ücretsiz olmalı!  n  nBu nedenle kodu açık kaynaklı olarak kullandım, bu da kodun herkesin kullanması ve keşfetmesi için ücretsiz olduğu anlamına geliyor. Github'daki projemizi ziyaret ederek özellikler önermek veya Sight-Check'i daha iyi hale getirmek için Instagram'da Sight-Check'i takip edin.",
-  "close-left": "Lütfen sol gözünü kapat",
-  "close-right": "Lütfen sağ gözünü kapat",
-  "contribute": "Katkıda bulunmak",
+  "about": "Hakkımızda",
+  "about-text": "Bir yılı aşkın bir süredir Sight-Check geliştirmekten ve bu kadar çok kişiye yardım etmekten gerçekten zevk aldım! Gördüğünüz gibi uygulamaya reklam veya ücret dahil etmemeye karar verdim, çünkü sağlık hizmetleri sizin için ücretsiz olmalı!  n  nBu nedenle kodu açık kaynaklı olarak kullandım, bu da kodun herkesin kullanması ve keşfetmesi için ücretsiz olduğu anlamına geliyor. Github'daki projemizi ziyaret ederek özellikler önermek veya Sight-Check'i daha iyi hale getirmek için Instagram'da Sight-Check'i takip edin.",
+  "close-left": "Lütfen sol gözünüzü kapatın",
+  "close-right": "Lütfen sağ gözünüzü kapatın",
+  "contribute": "Katkıda bulunun",
   "diagnosis-description": "Bu tanı yaklaşık 5 dakika veya daha kısa sürer.",
   "distance-description": "Cihaza olan mesafeyi seçin",
-  "follow-us": "Bizi takip et",
+  "follow-us": "Bizi takip edin",
   "left": "sol",
   "medical-disclaimer": "Bu uygulama tıbbi bir öneri yerine geçemez.",
   "near-vision-diagnosis": "Yakın Görme Teşhisi",
@@ -14,7 +14,7 @@
   "rate-us": "geri bildirim",
   "right": "sağ",
   "share": "paylaşım",
-  "share-text": "Merhaba, görme kontrolümü test etmek için Sight-Check kullandım: https://sightcheck.de",
+  "share-text": "Görme kontrolümü test etmek için Sight-Check kullandım: https://sightcheck.de",
   "start": "başla",
-  "your-result": "Senin sonucun"
+  "your-result": "İşte sonucun"
 }
